@@ -3,4 +3,6 @@ public interface InterConta {
     void depositar(double valor);
     void transferir(double valor, Conta contaDestino);
     void imprimirExtrato ();
+    void imprimirNome();
+    Object imprimirTipo();
 }

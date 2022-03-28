@@ -30,23 +30,28 @@ public abstract class Conta implements InterConta{
         contaDestino.depositar(valor);
     }
 
-    protected void InfoGeralConta() {
-        System.out.println(String.format("Agencia: %d", this.agencia));
-        System.out.println(String.format("Conta: %d", this.numero));
+    protected void getNomeCliente(){
         System.out.println(String.format("Titular: %s", this.cliente.getNome()));
-        System.out.println(String.format("Saldo: %.2f", this.saldo));
     }
 
+    protected void InfoGeralConta() {
+        System.out.println(String.format("Agencia: %d", getAgencia()));
+        System.out.println(String.format("Conta: %d", getNumero()));
+        System.out.println(String.format("Titular: %s", this.cliente.getNome()));
+        System.out.println(String.format("Saldo: %.2f", getSaldo()));
+    }
+
+
     public int getAgencia() {
-        return agencia;
+        return this.agencia;
     }
 
     public int getNumero() {
-        return numero;
+        return this.numero;
     }
 
     public double getSaldo() {
-        return saldo;
+        return this.saldo;
     }
 
 }
